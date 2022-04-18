@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora/static/Lora-Medium.ttf);
+ }
+ 
 html,body{
     height:fit-content;
 }
@@ -30,6 +35,8 @@ min-height: 0;
     flex-basis: 5%;
     
 }
+
+
 .right {
     position: sticky;
     top: 0;
@@ -74,10 +81,12 @@ min-height: 0;
 }
 
 .post_demo_placeholder {
-    display: block;
-    border: 1px solid black;
-    padding: 1px;
-    margin: 10px 0px 30px 5px
+    display: flex;
+    border: 0px solid black;
+    padding: 3px;
+    margin: 10px 0px 30px 5px;
+    height: 15vh;
+    align-items: center;
 
 }
 .post_demo_placeholder:hover{
@@ -89,6 +98,8 @@ min-height: 0;
     height: 100%;
     background-size: cover;
     border-radius: 50%;
+    min-width: 30px;
+    max-width: 200px;
 }
 .thumbnail {
     width: 20%;
@@ -116,4 +127,102 @@ min-height: 0;
     padding: 5px;
     margin: 10px 10px 0px 0px;
     font-size: small;
+}
+#maincontent {
+    text-align: justify;
+     line-height: 30px;
+    font-family: Lora;
+}
+#allcontent {
+    display: flex; 
+    flex-direction: column; 
+    padding: 70px;
+}
+
+@media (max-width:800px) {
+    .left{
+        display: none;
+    }
+    .center{
+        flex-grow: 1;
+        flex-basis: 100%;
+        order: 1;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .right{
+        order: 2;
+    }
+    #maincontent{
+        text-align: justify;
+        line-height: 30px;
+    
+        font-size: small;
+    }
+    #allcontent {
+        padding: 15px !important;
+    }
+
+    
+    
+}
+
+@media (min-width:800px) and (max-width:1000px) {
+    
+    
+    .center{
+        flex-grow: 1;
+        flex-basis: 100%;
+        order: 1;
+        background-color: aqua;
+    }
+
+    .right{
+        order: 2;
+    }
+    #maincontent{
+        text-align: justify;
+        line-height: 30px;
+    
+        font-size: medium;
+    }
+    #allcontent {
+        padding: 15px !important;
+    }
+    .post_demo_placeholder {
+        display: flex;
+        border: 0px solid black;
+        padding: 0px;
+        margin: 0px 0px 0px 0px;
+        height: 15vh;
+        align-items: center;
+
+    
+    }
+    .post_demo_placeholder  strong {
+        font-size: smaller !important;
+
+       
+
+    }
+    .helperlinks{
+        padding: 1px;
+        margin: 3px 3px 0px 0px;
+        font-size: small;
+    }
+    
+    #rightpublisher strong,small{
+        font-size: x-small;
+    
+    }
+    .usr_info_placeholder{
+        padding: 0px; 
+        width: fit-content;   
+    }
+    .usr_info_placeholder img{
+        width: 6vw !important;
+        height: 6vh !important;
+    }
+    
 }
