@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/LeftNavBar/icons/favicon_2.svg">
+    <!-- Change this to your page name-->
+
+    <title>Change This to your page name</title>
+
+    <!--################################-->
+    <link rel="stylesheet" href="style/layout_style.css">
+    <link rel="stylesheet" href="style/stories_style.css">
+</head>
+<body>
+    
+        <div class="row">
+            <div class="column left">
+                <a href="layout.html">
+                    <img style="cursor: pointer;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus"/>
+                </a>
+                <div id="navBar">
+                    <a href="layout.html">
+                        <img  class="leftAssets" src="assets/LeftNavBar/home.svg" alt="Home Page" >
+                    </a>
+                    <a href="#">
+                        <img class="leftAssets" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
+                    </a>
+                    <a href="#">
+                        <img class="leftAssets" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
+                    </a>
+                    <a href="/stories-page.html">
+                    <img class="leftAssets" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
+                    </a>
+                <center><hr style="text-align:left;margin-bottom: 20px;"></center>
+                <img class="leftAssets" src="assets/LeftNavBar/write.svg" alt="Saved Articles">
+                </div>
+            </div>
+            
+            <div class="column center" style="font-family:Calibri, 'Trebuchet MS', sans-serif, Arial;">
+                <div style="margin: 0 10% 0;">
+                    <center style="display: flex; align-items: center;">
+                        <h1 style="flex: 40%; font-size:50px; text-align: left;">Your stories</h1>
+                        <div style=" flex:40%; ">
+                            <a href="#"><span style="color: aliceblue; background-color:green; border-radius:20px; padding:11px; margin:10px;"> Write a story </span> </a>
+                            <a href="#"><span style="border-style:solid ; border-width: 1px; border-radius:20px; padding:9px; margin:10px"> Import a story</span></a>
+                        </div>
+                    </center>
+                    <div id="all-content" style="padding-top: 0%;">
+                        <div>
+                            <ul style="display: flex; padding-left:0;list-style:none" id="options">
+                                <li id="drafts">Drafts</li>
+                                <li id="published">Published</li>
+                                <li id="responses">Responses</li>
+                            </ul>
+                            <center><hr style="text-align:left;margin:0 0 20px;width: 100%; position: relative; top: -17px;"></center>
+                            
+                        </div>
+                        <div id="maincontent" >
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column right">
+                <h1><center>Right</center></h1>
+                <div class="rightBlock">
+                    <a href="">Sign in</a>
+                    <input class="search" type="text" placeholder="Search..">
+                    
+                    <div class="usr_info_placeholder">
+                        <img style="width: 10vw; height: 100%; border-radius:50%; margin-right: 10px;" src="assets/RightBar/usr_img.jpg" alt="follow">
+                        <div id="rightpublisher">
+                            <Strong>Mahmoud Mohsen</Strong>
+                            <br>
+                            <small>52K followers</small>
+                            <br>
+                            <button>follow</button>
+                            <br>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="height: auto; ">
+                        <hr style="opacity: 1; width: 100%;">
+                        <strong style="margin-top: 10px; margin-bottom: 10px;">More posts</strong>
+                        
+                        <div class="post_demo_placeholder">
+                            
+                            <div style="width: 100%; display: flex; flex-direction: column;">
+                                <div style="width:70%; align-items: center;">
+                                    <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo">
+                                    <small>Joseph fakher</small>
+                                </div>
+                                <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour.</strong>
+                                
+                            </div>
+                            <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
+                            
+                        </div>
+
+                    
+
+                        
+                        
+                        
+
+                    </div>
+                    <div style="display: flex; height: 100%; justify-content: center;" >
+                        <br>
+                        <a class="helperlinks" href="">About</a>
+                        <a class="helperlinks" href="">FAQ</a>
+                        <a class="helperlinks" href="">Privacy</a>
+                        <a class="helperlinks" href="">Terms</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        
+<script src="./js/stories-page.js"></script>
+</body>
+</html>

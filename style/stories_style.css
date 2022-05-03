@@ -1,0 +1,20 @@
+#options li{
+    opacity: 70%;
+    font-size: 16px;
+    margin: 0  30px 0 0;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.active{
+    opacity: 100% !important;
+    border-bottom: solid 1px;
+    z-index: 1;
+}
+hr{
+    opacity: 30%;
+}
+
+a{
+    text-decoration: none;
+}
