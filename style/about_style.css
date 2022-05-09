@@ -8,7 +8,7 @@ html,body {
 
 .pageHeader{
 
-    height: 100px;
+    height: 80px;
     width: 100%;
      
     border-bottom: 1px solid black;
@@ -123,7 +123,7 @@ a {
     padding-top: 4px;
 }
 
-.threeRows{
+.threeCols{
 
     display: flex;
     justify-content: space-between;
@@ -131,11 +131,12 @@ a {
     
     background-color: #ffd1b9;
     padding-top: 70px;
+    padding-bottom: 60px;
     
 
 }
 
-.firstRow{
+.firstCol{
 
     width: 33%;
     flex-direction: column;
@@ -149,7 +150,7 @@ a {
 }
 
 
-.secondRow{
+.secondCol{
 
     width: 33%;
     flex-direction: column;
@@ -162,11 +163,12 @@ a {
 
 }
 
-.thirdRow{
+.thirdCol{
     width: 33%;
     flex-direction: column;
     align-items: center;
     padding-right: 25px;
+    
    
 }
 
@@ -186,4 +188,131 @@ a {
     border-top: 2px solid black;
     padding-top: 15px ;
     
+    
+}
+
+.lastRow{
+    border-bottom: 2px solid black;
+}
+
+
+
+.firstBlackArea{
+    background-color: black;
+    min-height: 480px;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    
+
+}
+
+.secondBlackArea{
+    min-height: 480px;
+    background-color: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.leftBlackChild{
+    width: 50%;
+    border-right: 1px solid white;
+
+}
+.rightBlackChild{
+    width: 50%;
+}
+
+.divForLargeText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4.2vw;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+.lrgTxtHolder{
+
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+/* .lrgtxt{
+    color: white;
+    
+} */
+
+.acrossPageTxt{
+    font-size: 7.3vw; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif; 
+    letter-spacing: -0.35vw; 
+    margin-bottom: 0%;
+     color: white;
+}
+
+.paragraphWrap{
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    width: 42%;
+    font-family: 'Soehne web buch', sans-serif;
+
+}
+
+#styleButton{
+    padding: 10px 20px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #34a245;
+    border-radius: 20px;
+    position: relative;
+    height: auto;
+
+}
+
+.buttonText{
+    font-size: 20px;
+    font-family: 'Soehne web buch', sans-serif;
+    cursor: pointer;
+
+}
+
+#styleButton:hover{
+background-color: #34a245;
+color: white;
+}
+
+
+.firstGreenArea{
+    min-height: 480px;
+    background-color: #34a245;
+    border-bottom: 1px solid #000;
+
+}
+
+.secondGreenArea{
+    min-height: 380px;
+    background-color: #34a245;
+    border-bottom: 1px solid #000;
+
+}
+
+.leftGreenChild{
+    width: 50%;
+    border-right: 1px solid black;
 }
