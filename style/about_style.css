@@ -248,6 +248,7 @@ a {
     text-align: center ;
     justify-content: center; 
     align-items: center;
+   
 
 }
 
@@ -258,7 +259,7 @@ a {
 
 .acrossPageTxt{
     font-size: 7.3vw; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     letter-spacing: -0.35vw; 
     margin-bottom: 0%;
      color: white;
@@ -280,10 +281,23 @@ a {
     border-width: 1px;
     border-color: #34a245;
     border-radius: 20px;
-    position: relative;
+    /* position: relative; */
     height: auto;
 
 }
+#styleButton2{
+    padding: 10px 20px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 20px;
+    /* position: relative; */
+    height: auto;
+
+}
+
+
+
 
 .buttonText{
     font-size: 20px;
@@ -296,12 +310,22 @@ a {
 background-color: #34a245;
 color: white;
 }
-
+#styleButton2:hover{
+    background-color: white;
+    color: black;
+    }
 
 .firstGreenArea{
     min-height: 480px;
     background-color: #34a245;
     border-bottom: 1px solid #000;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 40px;
+   
 
 }
 
@@ -309,10 +333,37 @@ color: white;
     min-height: 380px;
     background-color: #34a245;
     border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+
+    
 
 }
 
 .leftGreenChild{
     width: 50%;
     border-right: 1px solid black;
+}
+
+footer{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #71b57b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+}
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45%;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+    
 }
