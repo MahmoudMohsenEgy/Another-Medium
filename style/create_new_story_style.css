@@ -102,6 +102,7 @@ nav .icon-right:hover{
 .add-icon{
     vertical-align: top;
     position: relative;
+    display: inline-block;
     top: 10px;
     left: -2%;
     width: 30px;
