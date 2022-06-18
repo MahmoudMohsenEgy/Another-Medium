@@ -15,6 +15,7 @@ body{
     margin: 0 auto;
 }
 .roww{
+    width: auto;
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -56,15 +57,15 @@ min-height: 0;
 }
 
 .leftAssets {
-    transform: scale(0.7);
+    transform: scale(0.5);
     padding: 0pt;
     margin-top: 50px;
     margin-bottom: 50px;
-    transition: all 0.5s;
+    transition: all 1.5s;
 }
 .leftAssets:hover {
     cursor: pointer;
-    transform: scale(1.5) ;
+    transform: scale(0.76) ;
 }
 #navBar {
     height: 100%;
