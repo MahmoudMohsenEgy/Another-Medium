@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New story - Medium+</title>
+    <link href="./style/create_new_story_style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/LeftNavBar/icons/favicon_2.svg">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="./assets/LeftNavBar/icons/MediumPlus.svg" id="medium" >
+            <span id="user-name">Draft in QuadM</span>
+            <span id="isSaved" style="margin: 0 1em 0;">Saved</span>
+        </div>
+        <div style="flex: 40%;"></div>
+        <div class="nav-right">
+            <ul>
+                <li>
+                    <span id="publish" >Publish</span>
+                </li>
+                <li>
+                    <img src="./assets/LeftNavBar/icons/dots.svg" class="icon-right" style="height: 1em;" ></img>
+                </li>
+                <li>
+                    <img src="./assets/LeftNavBar/icons/Notification.svg" class="icon-right" ></img>
+                </li>
+                <li>
+                    <img src="./assets/LeftNavBar/icons/profile picture.svg" id="profile-picture"></img>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    <div id="content">
+        <form id="story-form">
+            <div id="story-area">
+                <img src="./assets/LeftNavBar/icons/Add.svg" id="add-icon-1" class="add-icon hidden"/>
+                <input name="Title" type="text" placeholder="Title" style="font-size: 2.5em;" class="input" id="input-1">
+                <br>
+                <img src="./assets/LeftNavBar/icons/Add.svg" id="add-icon-2" class="add-icon hidden"/>
+                <textarea name="story" type="text-area" placeholder="Tell your story..." style="font-size: 1.3em; overflow: hidden; " rows="20" class="input" id="input-2"></textarea>
+            </div>
+        </form>
+    </div>
+    <footer></footer>
+    <script src="./index.js"></script>
+</body>
+</html>
