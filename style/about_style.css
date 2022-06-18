@@ -1,0 +1,369 @@
+
+html,body {
+    margin:0;
+    padding:0;
+    
+}
+
+
+.pageHeader{
+
+    height: 80px;
+    width: 100%;
+     
+    border-bottom: 1px solid black;
+    
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+   
+}
+
+.brandContainer{
+
+    
+padding-left: 10px;
+padding-top: 5px;
+
+
+
+}
+
+
+.navMenu{
+
+    position: relative;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    background-color: transparent;
+   
+    
+
+
+
+}
+
+.button{
+    background-color: black;
+    
+    padding: 5px 20px 5px;
+    color: white;
+    display: flex; 
+    float: right; 
+    margin-right: 15px;
+    background-color: black;
+    border-radius: 20px;
+   
+}
+
+.secondSec{
+
+    margin-top: 100px; 
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 400%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+    
+}
+
+
+#story:link{
+    color: black;
+    text-decoration: none;
+}
+#membership:link{
+    color: black;
+    text-decoration: none;
+}
+#write:link{
+    color: black;
+    text-decoration: none;
+}
+#signin:link{
+    color: black;
+    text-decoration: none;
+}
+#story:visited{
+    color: black;
+    text-decoration: none;
+}
+#membership:visited{
+    color: black;
+    text-decoration: none;
+}
+#write:visited{
+    color: black;
+    text-decoration: none;
+}
+#signin:visited{
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.navItems{
+
+    margin-left: 15px;
+    margin-right: 15px; 
+    padding-top: 4px;
+}
+
+.threeCols{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    background-color: #ffd1b9;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    
+
+}
+
+.firstCol{
+
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25px;
+   
+  
+    
+    
+
+}
+
+
+.secondCol{
+
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; 
+    margin-right: 20px;
+   
+   
+
+
+}
+
+.thirdCol{
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 25px;
+    
+   
+}
+
+
+
+.col-logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+
+.eachCell{
+    display: flex;
+    padding-bottom: 15px;
+    border-top: 2px solid black;
+    padding-top: 15px ;
+    
+    
+}
+
+.lastRow{
+    border-bottom: 2px solid black;
+}
+
+
+
+.firstBlackArea{
+    background-color: black;
+    min-height: 480px;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    
+
+}
+
+.secondBlackArea{
+    min-height: 480px;
+    background-color: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.leftBlackChild{
+    width: 50%;
+    border-right: 1px solid white;
+
+}
+.rightBlackChild{
+    width: 50%;
+}
+
+.divForLargeText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4.2vw;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+.lrgTxtHolder{
+
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    justify-content: center; 
+    align-items: center;
+   
+
+}
+
+/* .lrgtxt{
+    color: white;
+    
+} */
+
+.acrossPageTxt{
+    font-size: 7.3vw; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    letter-spacing: -0.35vw; 
+    margin-bottom: 0%;
+     color: white;
+}
+
+.paragraphWrap{
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    width: 42%;
+    font-family: 'Soehne web buch', sans-serif;
+
+}
+
+#styleButton{
+    padding: 10px 20px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #34a245;
+    border-radius: 20px;
+    /* position: relative; */
+    height: auto;
+
+}
+#styleButton2{
+    padding: 10px 20px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 20px;
+    /* position: relative; */
+    height: auto;
+
+}
+
+
+
+
+.buttonText{
+    font-size: 20px;
+    font-family: 'Soehne web buch', sans-serif;
+    cursor: pointer;
+
+}
+
+#styleButton:hover{
+background-color: #34a245;
+color: white;
+}
+#styleButton2:hover{
+    background-color: white;
+    color: black;
+    }
+
+.firstGreenArea{
+    min-height: 480px;
+    background-color: #34a245;
+    border-bottom: 1px solid #000;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 40px;
+   
+
+}
+
+.secondGreenArea{
+    min-height: 380px;
+    background-color: #34a245;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+
+    
+
+}
+
+.leftGreenChild{
+    width: 50%;
+    border-right: 1px solid black;
+}
+
+footer{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #71b57b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+}
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45%;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+    
+}

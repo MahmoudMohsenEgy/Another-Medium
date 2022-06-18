@@ -8,18 +8,20 @@
  
 html,body{
     height:fit-content;
+    background-color: white;
 }
 body{
-    background-color: rgb(0, 0, 0); 
+ 
     margin: 0 auto;
 }
-.row{
+.roww{
+    width: auto;
     display: flex;
     flex-direction: row;
     height: fit-content;
 }
 
-.column {
+.columnn {
 float:left;
 padding:10px;
 min-height: 0;
@@ -56,14 +58,14 @@ min-height: 0;
 
 .leftAssets {
     transform: scale(0.5);
-    padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    transition: all 0.2s;
+    padding: 0pt;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: all 1.5s;
 }
 .leftAssets:hover {
     cursor: pointer;
-    transform: scale(0.6) ;
+    transform: scale(0.76) ;
 }
 #navBar {
     height: 100%;
@@ -82,10 +84,10 @@ min-height: 0;
 
 .post_demo_placeholder {
     display: flex;
-    border: 0px solid black;
+
     padding: 3px;
     margin: 10px 0px 30px 5px;
-    height: 15vh;
+    height: auto;
     align-items: center;
 
 }
@@ -109,6 +111,7 @@ min-height: 0;
 
 .search {
     width: 90%;
+    height: 10%;
     margin-left: 0px;
     margin-right: 10px;
     margin-top: 20px;
@@ -116,6 +119,9 @@ min-height: 0;
     border-radius: 10px;
     padding: 5px;
 }
+
+/*** STYLES ***/
+
 .usr_info_placeholder{
     padding: 10px;
     display: flex;
@@ -192,7 +198,7 @@ min-height: 0;
     }
     .post_demo_placeholder {
         display: flex;
-        border: 0px solid black;
+    
         padding: 0px;
         margin: 0px 0px 0px 0px;
         height: 15vh;
