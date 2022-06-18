@@ -54,11 +54,16 @@ min-height: 0;
     flex-basis: 70%;
 }
 
-.leftAssets {
-    transform: scale(0.5);
+
+.leftAssetsSpan {
+
     padding: 0px;
     margin-top: 10px;
     margin-bottom: 30px;
+    
+}
+.leftAssets {
+    transform: scale(0.5);
     transition: all 0.2s;
 }
 .leftAssets:hover {

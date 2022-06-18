@@ -18,3 +18,17 @@ hr{
 a{
     text-decoration: none;
 }
+.renderPost{
+    animation: render 0.4s;
+}
+
+@keyframes render{
+    from{
+        transform: translate(-1em,0);
+        opacity: 40%;
+    }
+    to{
+        transform: translate(0,0);
+        opacity: 100%;
+    }
+}

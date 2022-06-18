@@ -1,6 +1,7 @@
 const stories_page = document.querySelector("#stories-page");
 const main_content = document.querySelector("#maincontent");
 const home = document.querySelector("#home");
+const options = document.querySelectorAll("#options li");
 
 const get_data = async (option) => {
   const data = fetch(`http://localhost:3000/draft/${option}`, {
@@ -41,14 +42,40 @@ const createDraft = (id, title, date) => {
   draft.innerHTML =
     //   <a href="/draft/${id}"><b style="color:black;font-size:16px">${title}</b></a>
     `
-  <a href="#"><b style="color:black;font-size:16px;">${title}</b></a>
-  <p style='opacity:50%;'> Created ${timetxt} ago </p>   
-  <hr>
+  <div class="renderPost">
+    <a href="#${title.split(" ").join("-")}">
+      <b style="color:black;font-size:16px;">${title}</b>
+    </a>
+    <p style='opacity:50%;'> Created ${timetxt} ago </p>   
+    <hr>
+  </div>
   `;
   draft.style.font = "14px Arial, sans-serif";
   draft.style.marginTop = "20px";
   return draft;
 };
+const responses = [
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled response 1",
+    time: Date.UTC(2021),
+  },
+  {
+    id: "34rtdsayui87",
+    title: "Untitled response 2",
+    time: Date.UTC(2022, 3),
+  },
+  {
+    id: "34rtyuidsa87",
+    title: "Untitled response 3",
+    time: Date.UTC(2022, 4, 1),
+  },
+  {
+    id: "34rtyui8fas7",
+    title: "Untitled response 4",
+    time: Date.now(),
+  },
+];
 const drafts = [
   {
     id: "34rtyui8vds7",
@@ -76,21 +103,45 @@ const drafts = [
     time: Date.UTC(2020, 6),
   },
 ];
+const published = [
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled published 1",
+    time: Date.UTC(2021),
+  },
+  {
+    id: "34rtyui8fas7",
+    title: "Untitled published 4",
+    time: Date.now(),
+  },
+  {
+    id: "34rtyui8ewf7",
+    title: "Untitled published 5",
+    time: Date.UTC(2020, 6),
+  },
+];
 
-const options = document.querySelectorAll("#options li");
+const renderActive = (currentActive) => {
+  document.getElementById(currentActive).classList.add("active");
+  while (main_content.firstChild)
+    main_content.removeChild(main_content.firstChild);
+  const data =
+    currentActive === "drafts"
+      ? drafts
+      : currentActive === "published"
+      ? published
+      : responses;
+  data.forEach(({ id, title, time }) => {
+    main_content.appendChild(createDraft(id, title, time));
+  });
+};
 
 options.forEach((option) => {
   option.addEventListener("click", (e) => {
     options.forEach((o) => o.classList.remove("active"));
-    while (main_content.firstChild)
-      main_content.removeChild(main_content.firstChild);
-    option.classList.add("active");
     // const data = await get_data(option.id)
-    const data = drafts;
-    option.id === "drafts"
-      ? drafts.forEach(({ id, title, time }) => {
-          main_content.appendChild(createDraft(id, title, time));
-        })
-      : null;
+    renderActive(option.id);
   });
 });
+
+renderActive("drafts");
