@@ -3,6 +3,7 @@
     src: url(../fonts/Lora/static/Lora-Medium.ttf);
  }
 
+
 body {
     box-sizing: border-box;
     height: 100vh;
@@ -80,4 +81,12 @@ button:hover{
 
 .translate_down{
     transform: translate(0,20%) ;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: green;
 }
