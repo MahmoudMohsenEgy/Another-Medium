@@ -11,7 +11,7 @@ function createPostPreview(post){
     var postTitle = $("<strong></strong>");
     var postImg = $("<img>");
 
-    postHolder.attr("class", "post_demo_placeholder border border-secondary rounded ");
+    postHolder.attr("class", "post_demo_placeholder shadow-sm  bg-white rounded p-2");
     
     d2.attr("style","width: 100%; display: flex; flex-direction: column;");
     
@@ -22,9 +22,10 @@ function createPostPreview(post){
         "src":post["authImgSource"],
         "alt":"user photo",
     })
+    authImg.attr("style","margin: 2px;");
     
     authName.text(post.authName)
-    
+    authImg.attr("style","margin:6px")
     postTitle.text(post.title);
     
     postImg.attr({
@@ -46,7 +47,7 @@ function createPostPreview(post){
     
 
 }
-for (let i=0 ; i < 10 ; i++){
+for (let i=0 ; i < 3 ; i++){
 createPostPreview({
     postImgSrc:"assets/RightBar/oscp-vs-ceh.jpg",
     authImgSource:"assets/RightBar/joseph.jpg",
@@ -58,9 +59,9 @@ createPostPreview({
 
 
 function setAuthor(post){
-    $("#authorImage").attr("src","assets/RightBar/usr_img.jpg");
+    $("#authorImage").attr("src","assets/RightBar/joseph.jpg");
     $(".authorName").text("Mahmoud Mohsen");
-    $("#numFollowers").text(String(Math.floor(Math.random(0,100)*100))+"K")
+    $("#numFollowers").text(String(Math.floor(Math.random(0,100)*100))+"K Followers")
 
 }
 
