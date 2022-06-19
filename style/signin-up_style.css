@@ -1,0 +1,83 @@
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora/static/Lora-Medium.ttf);
+ }
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(180deg,white 70%,#dfffeb);
+    font-family: Lora;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+label{
+    width: 100%;
+    text-align: left;
+    transition: transform 0.2s ease-in;
+}
+input {
+    width: 300px;
+    background:
+        linear-gradient(#000, #000) center bottom 5px /calc(100% - 10px) 2px no-repeat;
+    /* background-color: #fcfcfc; */
+    border: 0px;
+    padding: 8px;
+}
+
+.center > .row{
+    margin: 20px 0;
+} 
+
+input:focus {
+    outline: none;
+}
+
+button{
+    border-radius: 30px;
+    text-align: center;
+    border-width: 1px;
+    padding: 10px 30px ;
+    line-height: 15px;
+    font-weight: 500;
+    margin: 15px;
+    color: white;
+    background-color: black;
+}
+
+button:hover{
+    background-color: green;
+}
+
+@media (max-width:350px) {
+    input{
+        width: 150px;
+    }
+}
+
+.translate_up{
+    transform: translate(0,-20%) ;
+}
+
+.translate_down{
+    transform: translate(0,20%) ;
+}
