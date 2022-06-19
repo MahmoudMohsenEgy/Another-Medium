@@ -43,8 +43,11 @@ min-height: 0;
 }
 
 li{
-    margin: 40px 0;
+    padding: 0 0 80px;
     height: 0;
+}
+#left-hr{
+    padding: 0 0 40px;
 }
 .right {
     position: sticky;
@@ -55,8 +58,7 @@ li{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    border-left: 1px solid rgb(0, 0, 0,0.1);
-    
+    border-left: 1px solid rgb(0, 0, 0,0.1);   
 }
 .center {
     background-color: white;
@@ -64,11 +66,9 @@ li{
 }
 
 .leftAssets {
-    transform: scale(0.4);
+    transform: scale(0.5);
     padding: 0pt;
-  
-
-    transition: all 1.5s;
+    transition: all 0.4s;
 }
 .leftAssets:hover {
     cursor: pointer;
@@ -143,6 +143,7 @@ li{
     margin-top: auto;
 }
 #maincontent {
+    max-width: 35vw;
     text-align: justify;
      line-height: 30px;
     font-family: Lora;

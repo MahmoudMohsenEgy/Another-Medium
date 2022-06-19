@@ -18,45 +18,41 @@
     <div class="container-lg">    
         <div class="roww">
             <div class="column left">
-                <a href="layout.html" >
+                <a href="index.html" >
                     <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
-                    <ul class="nav flex-column justify-content-center" style="height: 100%;">
-                            <li class="nav-item">
-                                <a href="layout.html">
-                                    <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#">
-                                    <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#">
-                                    <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/stories-page.html">
-                                <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                            <hr style="height: 1px;">
-                            </li>
-                            <li class="nav-item">
-                                <a href="/stories-page.html" style="height:0">
+                <ul class="nav flex-column justify-content-center" style="height: 100%; margin:auto">
+                        <li class="nav-item">
+                            <a href="layout.html">
+                                <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/stories-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories" style="width:60px ;">
+                            </a>
+                        </li>
+                        <li class="nav-item" id="left-hr">
+                            <div >
+                                <hr style="height: 1px;">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/stories-page.html">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
-                                </a>
-                            </li>
-                            
-                            
-                           
-                            
-                        
-                    </ul>
-                
+                            </a>
+                        </li>
+                </ul>
             </div>
             
             <div class="center column">
@@ -74,7 +70,7 @@
                     </div>
                     <Strong style="font-size:2rem;">Introduction to Machine Learning algorithms using Python</Strong>
                     <br>
-                <p id="maincontent" class="container">
+                <pre id="maincontent" class="container">
                 
 machine learning, there is a theorem called “no free lunch.” In short, it states that no single algorithm works for all problems, especially in supervised learning (ie, predictive modeling).
 For example, you can’t say that neural networks are always better than decision trees, and vice versa. There are many factors at work, such as the size and structure of the data set.
@@ -195,14 +191,14 @@ https://machinelearningmastery.com/start-here/#algorithms
 613
 
                 
-                </p>
+                </pre>
 
                 </div>
 
             </div>
-            <div class="right column" style="">
+            <div class="right column">
                 
-                <div class="rightBlock" style="margin-left: 5px;">
+                <div class="rightBlock" style="margin-left: 5px;padding:1em">
                     <div class="row">
                     <div class="col-8 text-center" >
                     <a href="signup.html" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
@@ -232,7 +228,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                         <strong style="margin-top: 10px; margin-bottom: 10px;">More posts</strong>
                         <div style="position:absolute; bottom:0; margin-left: auto; margin-right: auto;"></div>
                         <div id="postsPreview">
-                            <div class="post_demo_placeholder shadow-sm  bg-white rounded p-2" >
+                            <div class="post_demo_placeholder shadow bg-white rounded p-2" >
                                 
                                 <div style="width: 100%; display: flex; flex-direction: column;" >
                                     <div style="width:70%; align-items: center;">
