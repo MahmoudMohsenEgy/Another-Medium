@@ -8,18 +8,23 @@
  
 html,body{
     height:fit-content;
+    background-color: white;
 }
 body{
-    background-color: rgb(0, 0, 0); 
+ 
     margin: 0 auto;
 }
-.row{
+.roww{
+    width: auto;
     display: flex;
     flex-direction: row;
     height: fit-content;
 }
 
-.column {
+.container-fluid{
+    padding:0;
+}
+.columnn {
 float:left;
 padding:10px;
 min-height: 0;
@@ -33,7 +38,6 @@ min-height: 0;
     background-color: white;
     border-right: 1px solid rgb(0, 0, 0,0.1);
     flex-basis: 5%;
-    
 }
 
 
@@ -54,21 +58,25 @@ min-height: 0;
     flex-basis: 70%;
 }
 
-
-.leftAssetsSpan {
-
-    padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    
+.nav{
+    transform: translate(0,-5em);
 }
+
+.nav-item{
+    transform: scale(0.45);
+}
+
 .leftAssets {
-    transform: scale(0.5);
-    transition: all 0.2s;
+    padding: 0pt;
+    width: 5em;
+    height: 5em;
+    margin: 0em auto 1em;
+    transition: all 0.3s;
+
 }
 .leftAssets:hover {
     cursor: pointer;
-    transform: scale(0.6) ;
+    transform: scale(1.2) ;
 }
 #navBar {
     height: 100%;
@@ -87,10 +95,10 @@ min-height: 0;
 
 .post_demo_placeholder {
     display: flex;
-    border: 0px solid black;
+
     padding: 3px;
     margin: 10px 0px 30px 5px;
-    height: 15vh;
+    height: auto;
     align-items: center;
 
 }
@@ -114,6 +122,7 @@ min-height: 0;
 
 .search {
     width: 90%;
+    height: 10%;
     margin-left: 0px;
     margin-right: 10px;
     margin-top: 20px;
@@ -121,6 +130,9 @@ min-height: 0;
     border-radius: 10px;
     padding: 5px;
 }
+
+/*** STYLES ***/
+
 .usr_info_placeholder{
     padding: 10px;
     display: flex;
@@ -197,7 +209,7 @@ min-height: 0;
     }
     .post_demo_placeholder {
         display: flex;
-        border: 0px solid black;
+    
         padding: 0px;
         margin: 0px 0px 0px 0px;
         height: 15vh;

@@ -5,50 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/LeftNavBar/icons/favicon_2.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/layout_style.css">
+    <link rel="stylesheet" href="style/stories_style.css">
+
     <!-- Change this to your page name-->
 
     <title>Change This to your page name</title>
 
     <!--################################-->
-    <link rel="stylesheet" href="style/layout_style.css">
-    <link rel="stylesheet" href="style/stories_style.css">
+    
+
 </head>
 <body>
-    
-        <div class="row">
+    <div class="container-fluid">    
+        <div class="roww">
             <div class="column left">
                 <a href="layout.html">
-                    <img style="cursor: pointer;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus"/>
+                    <img style="cursor: pointer; margin:1em 5px 0" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus"/>
                 </a>
+
                 <div id="navBar">
-                    <span class="leftAssetsSpan">
-                        <a href="layout.html">
-                            <img  class="leftAssets" src="assets/LeftNavBar/home.svg" alt="Home Page" >
-                        </a>
-                    </span>
-                    <span class="leftAssetsSpan">
-                        <a href="#">
-                            <img class="leftAssets" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
-                        </a>
-                    </span>
-                    <span class="leftAssetsSpan">
-                        <a href="#">
-                            <img class="leftAssets" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
-                        </a>
-                    </span>
-                    <span class="leftAssetsSpan">
-                        <a href="/stories-page.html">
-                            <img class="leftAssets" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
-                        </a>
-                    </span>
-                <center><hr style="text-align:left;margin-bottom: 20px;"></center>
-                <img class="leftAssets" src="assets/LeftNavBar/write.svg" alt="Saved Articles">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="layout.html">
+                                <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/stories-page.html">
+                            <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
+                            </a>
+                        </li>
+                        <li class="nav-item" style="transform:scale(1);">
+                            <center><hr style="text-align:left; margin:2em auto 1em; height:2px; width:80% "></center>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/create-new-story.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles">
+                            </a>
+                        </li> 
+                    </ul>
                 </div>
             </div>
             
             <div class="column center" style="font-family:Calibri, 'Trebuchet MS', sans-serif, Arial;">
                 <div style="margin: 0 10% 0;">
-                    <center style="display: flex; align-items: center;">
+                    <center style="display: flex; align-items: center; margin: 5em auto 2em;">
                         <h1 style="flex: 40%; font-size:50px; text-align: left;">Your stories</h1>
                         <div style=" flex:40%; ">
                             <a href="#"><span style="color: aliceblue; background-color:green; border-radius:20px; padding:11px; margin:10px;"> Write a story </span> </a>
@@ -72,20 +85,21 @@
                 </div>
 
             </div>
-            <div class="column right">
-                <h1><center>Right</center></h1>
+            <div class="right column" style="">
+                
                 <div class="rightBlock">
-                    <a href="">Sign in</a>
-                    <input class="search" type="text" placeholder="Search..">
+                    <a href="" role="button" class="btn btn-outline-secondary">Sign in</a>
+
+                                        
                     
                     <div class="usr_info_placeholder">
-                        <img style="width: 10vw; height: 100%; border-radius:50%; margin-right: 10px;" src="assets/RightBar/usr_img.jpg" alt="follow">
-                        <div id="rightpublisher">
-                            <Strong>Mahmoud Mohsen</Strong>
+                        <img id="authorImage" style="height: 100; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle w-50" alt="follow">
+                        <div id="rightpublisher" class="container">
+                            <Strong class="authorName">Mahmoud Mohsen</Strong>
                             <br>
-                            <small>52K followers</small>
+                            <small id="numFollowers">52K followers</small>
                             <br>
-                            <button>follow</button>
+                            <button type="button" class="btn btn-outline-success">Follow</button>
                             <br>
                             
                         </div>
@@ -95,20 +109,22 @@
                     <div style="height: auto; ">
                         <hr style="opacity: 1; width: 100%;">
                         <strong style="margin-top: 10px; margin-bottom: 10px;">More posts</strong>
-                        
-                        <div class="post_demo_placeholder">
-                            
-                            <div style="width: 100%; display: flex; flex-direction: column;">
-                                <div style="width:70%; align-items: center;">
-                                    <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo">
-                                    <small>Joseph fakher</small>
+                        <div style="position:absolute; bottom:0; margin-left: auto; margin-right: auto;"></div>
+                        <div id="postsPreview">
+                            <div class="post_demo_placeholder border border-secondary rounded " >
+                                
+                                <div style="width: 100%; display: flex; flex-direction: column;" >
+                                    <div style="width:70%; align-items: center;">
+                                        <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo">
+                                        <small>Joseph fakher</small>
+                                    </div>
+                                    <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour. </strong>
+                                    
                                 </div>
-                                <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour.</strong>
+                                <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
                                 
                             </div>
-                            <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
-                            
-                        </div>
+                    </div>
 
                     
 
@@ -117,12 +133,14 @@
                         
 
                     </div>
-                    <div style="display: flex; height: 100%; justify-content: center;" >
-                        <br>
-                        <a class="helperlinks" href="">About</a>
-                        <a class="helperlinks" href="">FAQ</a>
-                        <a class="helperlinks" href="">Privacy</a>
-                        <a class="helperlinks" href="">Terms</a>
+                    
+                        <div style="display: flex; height: 100%; justify-content: center; " >
+                            <br>
+                            <a class="helperlinks" href="">About</a>
+                            <a class="helperlinks" href="">FAQ</a>
+                            <a class="helperlinks" href="">Privacy</a>
+                            <a class="helperlinks" href="">Terms</a>
+                        </div>
                     </div>
 
 
@@ -130,7 +148,12 @@
 
             </div>
         </div>
+    </div>
         
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/stories-page.js"></script>
+<script src="./js/post-page.js"></script>
 </body>
 </html>
