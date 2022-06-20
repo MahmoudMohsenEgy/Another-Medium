@@ -699,4 +699,13 @@ const renderActive = (id,title,author,content,img) => {
 //   });
 // });
 
+<<<<<<< HEAD
 //renderActive(row[0]);
+=======
+renderActive();
+
+
+
+
+
+>>>>>>> ac9a89940f69c1670289446d27509d996130842d

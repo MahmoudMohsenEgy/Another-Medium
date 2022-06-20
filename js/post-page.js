@@ -17,22 +17,23 @@ function createPostPreview(post) {
   d2.attr("style", "width: 100%; display: flex; flex-direction: column;");
 
   d3.attr("style", "width:70%; align-items: center;");
-
+  console.log("Hello from create post prev");
   authImg.attr({
     class: "userphoto",
-    src: post["authImgSource"],
+    //src: post["authImgSource"],
+    src:post["author"]["img"],
     alt: "user photo",
   });
   authImg.attr("style", "margin: 2px;");
 
-  authName.text(post.authName);
+  authName.text(post['author']['name']);
   authImg.attr("style", "margin:6px");
-  postTitle.text(post.title);
+  postTitle.text(post['title']);
 
   postImg.attr({
     style: "width:30%;height: 50%; padding: 5px;",
     class: "thumbnail",
-    src: post["postImgSrc"],
+    src: post["img"],
     alt: "post image",
   });
 
@@ -66,27 +67,43 @@ function setContent(post) {
 setContent({})
 
 console.log("Checking for uid and username")
-if(localStorage.uid && localStorage.uname){
-  console.log("ANA GOWA!!!!!")
+console.log(localStorage.uid != 0)
+if(localStorage.uid != 0){
+      console.log("ANA GOWA!!!!!")
 
-  $("#getstartedbutton").text("Hello " + localStorage.uname);
-  $("#getstartedbutton").attr({
-    class:"btn rndBtn",
-    style:"margin-top: 20px; color: #0d9c08;"
-  })
-  $("#signinbutton").text("Sign out")
-  $("#signinbutton").attr({
-    class:"btn btn-dark rndBtn text-center",
-    style:"margin-top: 20px; width: 100%; ",
-  })
+      $("#getstartedbutton").text("Hello " + localStorage.uname);
+      $("#getstartedbutton").attr({
+        class:"btn rndBtn",
+        style:"margin-top: 20px; color: #0d9c08;"
+      })
+      $("#signinbutton").text("Sign out")
+      $("#signinbutton").attr({
+        class:"btn btn-dark rndBtn text-center",
+        style:"margin-top: 20px; width: 100%; ",
+      })
 }
 
 
 
 function checkUserState(){
   var btn = $("#signinbutton");
-  if (btn.text().toLowerCase() == "sign up" ){
+  console.log("button text ->")
+  console.log(btn.text())
+  if (btn.text() == "Sign out" ){
     localStorage.uid = 0;
     location.uname = 0;
+    window.location.href = 'http://localhost/another-medium/index.php'
+  }
+  else{
+    console.log("HIIIII")
+    window.location.href = 'http://localhost/another-medium/signin.php'
   }
 }
+
+
+
+
+
+
+
+

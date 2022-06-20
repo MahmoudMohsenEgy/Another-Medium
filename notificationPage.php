@@ -1,3 +1,5 @@
+<?php include 'logic/getPosts.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +83,7 @@
                     <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; "id="getstartedbutton" >Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;"id="signinbutton" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;"id="signinbutton"  onclick="checkUserState()">Sign in</a>
                     </div>
                 </div>
                                         
@@ -145,7 +147,44 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/notificationPage.js"></script>
+<script src="./js/notification-page.js"></script>
 <script src="./js/post-page.js"></script>
+
+    
+    
+<script>
+    console.log("HELOOOOO");
+    console.log(" posts->");
+    var posts = new Array();
+    var posts = <?php echo json_encode($result); ?>;
+    
+    console.log(posts);
+    for (let i=0 ; i < posts.length ; i++)
+    {
+        createPostPreview(
+        {
+            // postImgSrc:posts[i]['img'],
+            // authImgSource:"assets/RightBar/joseph.jpg",
+            // authName: "Joseph Fakher",
+            // title: [posts[i]["title"]]
+            id:posts[i]['id'],
+            title:posts[i]['title'],
+            content:posts[i]['content'],
+            date:posts[i][['date']],
+            img:posts[i]['img'],
+            author: {
+                id:posts[i]['authorId'],
+                name:posts[i]['author']['name'],
+                followers:posts[i]['author']['followers'],
+                img:posts[i]['author']['img'],
+
+            },
+
+        }
+        );
+
+    }
+    
+    </script>
 </body>
 </html>
