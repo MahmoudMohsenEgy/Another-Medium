@@ -152,7 +152,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/stories-page.js"></script>
-<script src="./js/post-page.js"></script>
+<!-- <script src="./js/post-page.js"></script> -->
 
     
     

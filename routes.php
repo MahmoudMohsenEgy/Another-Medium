@@ -8,4 +8,10 @@ get('/','index.php');
 get('/about-us','about.php');
 get('/home-page/$user','home-page.php');
 get('/posts/$post','post.php');
+
+get('/lists-page','lists-page.php');
+get('/notification','notificationPage.php');
+get('/create-story','createNewStory.php');
+get('/stories','storiesPage.php');
+
 // any('/404','views/404.php');

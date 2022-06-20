@@ -89,7 +89,7 @@
                                         
                     
                 <div class="usr_info_placeholder" onclick="" style="margin-top: 50px;">
-                    <img id="authorImage" style="height: 80%; width: 30%; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
+                    <img id="authorImage" style="height: 80%; width: 30%; " src="./assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
                     <div id="rightpublisher" class="container">
                         <Strong class="authorName">Mahmoud Mohsen</Strong>
                         <br>
@@ -148,9 +148,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/notification-page.js"></script>
-<script src="./js/post-page.js"></script>
+<!-- <script src="./js/post-page.js"></script> -->
 
-    
     
 <script>
     console.log("HELOOOOO");
@@ -182,9 +181,7 @@
 
         }
         );
-
     }
-    
     </script>
 </body>
 </html>

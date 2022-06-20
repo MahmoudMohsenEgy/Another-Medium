@@ -47,24 +47,24 @@ function createPostPreview(post) {
 
 
 function setAuthor(post) {
-  $("#authorImage").attr("src", "../assets/RightBar/joseph.jpg");
-  $(".authorName").text("Mahmoud Mohsen");
-  $("#numFollowers").text(
-    String(Math.floor(Math.random(0, 100) * 100)) + "K Followers"
-  );
+  // $("#authorImage").attr("src", post['author']['img']);
+  // $(".authorName").text(post['author']['name']);
+  // $("#numFollowers").text(
+  //   post['author']['followers']
+  // );
 }
 
 //setAuthor({})
 
 function setContent(post) {
-  setAuthor({});
-  //$("#maincontent").text(post.text);
-  $("#readingMins").text(
-    String(Math.floor(Math.random() * 20) + 1) + " mins read"
-  );
+  // setAuthor(post);
+  // //$("#maincontent").text(post.text);
+  // $("#readingMins").text(
+  //   String(Math.floor(Math.random() * 20) + 1) + " mins read"
+  // );
 }
 
-setContent({})
+//setContent({})
 
 console.log("Checking for uid and username")
 console.log(localStorage.uid != 0)
@@ -99,11 +99,3 @@ function checkUserState(){
     window.location.href = 'http://localhost/another-medium/signin.php'
   }
 }
-
-
-
-
-
-
-
-
