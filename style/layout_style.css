@@ -21,6 +21,11 @@ body{
     height: fit-content;
 }
 
+
+.container-fluid{
+    padding:0;
+}
+
 .rndBtn {
     border-radius: 20px;
 }
@@ -38,9 +43,7 @@ min-height: 0;
     float:left;
     background-color: white;
     border-right: 1px solid rgb(0, 0, 0,0.1);
-    flex-basis: 0%;
-   
-    
+    flex-basis: 5%;
 }
 
 li{
@@ -66,14 +69,26 @@ li{
     flex-basis: 70%;
 }
 
+.nav{
+    transform: translate(0,-5em);
+}
+
+.nav-item{
+    transform: scale(0.45);
+}
+
 .leftAssets {
-    transform: scale(0.5);
     padding: 0pt;
-    transition: all 0.4s;
+    width: 5em;
+    height: 5em;
+    margin: 0em auto 1em;
+    transition: all 0.3s;
+
 }
 .leftAssets:hover {
     cursor: pointer;
-    transform: scale(0.6) ;
+    transform: scale(1.2) ;
+
 }
 #navBar {
     height: 100%;
@@ -155,6 +170,27 @@ li{
     padding: 70px;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(199, 199, 199);
+    border-right: solid white 5px;
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(162, 162, 162); 
+  }
+
 @media (max-width:800px) {
     .left{
         display: none;
@@ -183,6 +219,8 @@ li{
     
     
 }
+
+
 
 @media (min-width:800px) and (max-width:1000px) {
     
