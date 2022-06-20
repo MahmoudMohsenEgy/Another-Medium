@@ -17,17 +17,21 @@ const get_data = async (option) => {
     .catch((e) => console.error(e));
 };
 
-const createDraft = (id, title, date) => {
+const createDraft = (id, title, storiesNo) => {
   const list = document.createElement("div");
   list.innerHTML =
     //   <a href="/list/${id}"><b style="color:black;font-size:16px">${title}</b></a>
     `
-  <div class="renderPost">
-    <a href="#${title.split(" ").join("-")}">
-      <b style="color:black;font-size:16px;">${title}</b>
-    </a>
-    <p style='opacity:50%;'> Created ${timetxt} ago </p>   
-    <hr>
+  <div class="renderPost storiesList">
+    <div style="margin:0 0 4em">
+      <h4><b>${title}</b></h4>
+    </div>
+    <div style='height:2em;padding:1em 0;'> 
+      <a href="#${title.split(" ").join("-")}">
+        <span style="border: solid 1px; padding:7px 15px; border-radius:20px;color:black">View list</span>
+      </a>
+      <span style='opacity:50%;margin:0 10px'>${storiesNo} stories</span> 
+    </div>   
   </div>
   `;
   list.style.font = "14px Arial, sans-serif";
@@ -35,7 +39,7 @@ const createDraft = (id, title, date) => {
   return list;
 };
 
-const lists = [
+const saved = [
   {
     id: "34rtyui8vds7",
     title: "Untitled list 1",
@@ -57,19 +61,36 @@ const lists = [
     storiesNo: 8,
   },
 ];
+const highlights = [
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled highlited list 1",
+    storiesNo: 5,
+  },
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled highlited list 2",
+    storiesNo: 2,
+  },
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled highlited list 3",
+    storiesNo: 9,
+  },
+  {
+    id: "34rtyui8vds7",
+    title: "Untitled highlited list 4",
+    storiesNo: 8,
+  },
+];
 
 const renderActive = (currentActive) => {
   document.getElementById(currentActive).classList.add("active");
   while (main_content.firstChild)
     main_content.removeChild(main_content.firstChild);
-  const data =
-    currentActive === "drafts"
-      ? drafts
-      : currentActive === "published"
-      ? published
-      : responses;
-  data.forEach(({ id, title, time }) => {
-    main_content.appendChild(createDraft(id, title, time));
+  const data = currentActive === "saved" ? saved : highlights;
+  data.forEach(({ id, title, storiesNo }) => {
+    main_content.appendChild(createDraft(id, title, storiesNo));
   });
 };
 
@@ -81,4 +102,4 @@ options.forEach((option) => {
   });
 });
 
-renderActive("drafts");
+renderActive("saved");

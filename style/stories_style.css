@@ -23,6 +23,12 @@ a{
 .renderPost{
     animation: render 0.4s;
 }
+.storiesList{
+    background-color: rgb(246, 246, 246);
+    border: solid 1px rgb(217, 217, 217);
+    border-radius: 2px;
+    padding: 2em;
+}
 
 @keyframes render{
     from{

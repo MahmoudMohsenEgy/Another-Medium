@@ -1,5 +1,8 @@
 var txt = "";
 
+let title = document.getElementsByTagName("title")[0];
+// title.innerText = "haha";
+
 function createPostPreview(post) {
   var postHolder = $("<div></div>");
   var d2 = $("<div></div>");
@@ -27,7 +30,7 @@ function createPostPreview(post) {
   postTitle.text(post.title);
 
   postImg.attr({
-    style: "width: 30%;height: 50%; padding: 5px;",
+    style: "width:30%;height: 50%; padding: 5px;",
     class: "thumbnail",
     src: post["postImgSrc"],
     alt: "post image",
