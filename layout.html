@@ -15,63 +15,60 @@
     <link rel="stylesheet" href="style/layout_style.css">
 </head>
 <body>
-    <div class="container-fluid">    
+    <div class="container-lg">    
         <div class="roww">
             <div class="column left">
-                <a href="layout.html">
-                    <img style="cursor: pointer; margin:1em 5px 0" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus"/>
+                <a href="index.html" >
+                    <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
-                <div id="navBar">
-                <ul class="nav flex-column justify-content-center">
-                    <li class="nav-item">
-                        <a href="layout.html">
-                            <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
-                        </a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/stories-page.html">
-                        <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
-                        </a>
-                    </li>
-                    <li class="nav-item" style="transform:scale(1);">
-                        <center><hr style="text-align:left; margin:2em auto 1em; height:2px; width:80% "></center>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/create-new-story.html">
-                            <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles">
-                        </a>
-                    </li> 
+                <ul class="nav flex-column justify-content-center" style="height: 100%; margin:auto">
+                        <li class="nav-item">
+                            <a href="layout.html">
+                                <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="notification-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lists-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/stories-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories" style="width:60px ;">
+                            </a>
+                        </li>
+                        <li class="nav-item" id="left-hr">
+                            <div >
+                                <hr style="height: 1px;">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/create-new-story.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
+                            </a>
+                        </li>
                 </ul>
             </div>
-            </div>
             
-            <div class=" center column ">
+            <div class="center column">
                
                 <div id="allcontent">
                     <div style="display: flex;">
-                        <img   src="assets/RightBar/joseph.jpg" alt="userphoto" class="rounded-circle w-25">
+                        <img   src="assets/RightBar/joseph.jpg" alt="userphoto" class="rounded-circle" style="width: 150px;height:150px">
                         <div style="display: flex; flex-direction: column; margin-left: 30px;">
                             <p ><b class="authorName">Mahmoud Mohsen</b></p>
                             <small id="date">April 17,2022</small>
                             <small id="readingMins">11 mins read</small>
-                        </div>
-                        
-                        
+                        </div>    
                     </div>
                     <Strong style="font-size:2rem;">Introduction to Machine Learning algorithms using Python</Strong>
                     <br>
-                <p id="maincontent" class="container">
+                <pre id="maincontent" class="container">
                 
 machine learning, there is a theorem called “no free lunch.” In short, it states that no single algorithm works for all problems, especially in supervised learning (ie, predictive modeling).
 For example, you can’t say that neural networks are always better than decision trees, and vice versa. There are many factors at work, such as the size and structure of the data set.
@@ -192,43 +189,49 @@ https://machinelearningmastery.com/start-here/#algorithms
 613
 
                 
-            </p>
+                </pre>
 
                 </div>
 
             </div>
-            <div class="right column" style="margin-top: 60px;">
+            <div class="right column">
                 
-                <div class="rightBlock">
-                    <a href="" role="button" class="btn btn-outline-secondary">Sign in</a>
-
+                <div class="rightBlock" style="margin-left: 5px;padding:1em">
+                    <div class="row">
+                    <div class="col-8 text-center" >
+                    <a href="signup.html" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    </div>
+                    <div class="col">
+                        <a href="signin.html" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                    </div>
+                </div>
                                         
                     
-                    <div class="usr_info_placeholder">
-                        <img id="authorImage" style="height: 100; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle w-50" alt="follow">
+                    <div class="usr_info_placeholder" onclick="" style="margin-top: 50px;">
+                        <img id="authorImage" style="height: 80%; width: 30%; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
                         <div id="rightpublisher" class="container">
                             <Strong class="authorName">Mahmoud Mohsen</Strong>
                             <br>
                             <small id="numFollowers">52K followers</small>
                             <br>
-                            <button type="button" class="btn btn-outline-success">Follow</button>
+                            <button type="button" class="btn btn-outline-success rndBtn">Follow</button>
                             <br>
                             
                         </div>
                         
                     </div>
                     
-                    <div style="height: auto; ">
+                    <div style="height: auto; margin-left: 5px; ">
                         <hr style="opacity: 1; width: 100%;">
                         <strong style="margin-top: 10px; margin-bottom: 10px;">More posts</strong>
                         <div style="position:absolute; bottom:0; margin-left: auto; margin-right: auto;"></div>
                         <div id="postsPreview">
-                            <div class="post_demo_placeholder border border-secondary rounded " >
+                            <div class="post_demo_placeholder shadow bg-white rounded p-2" >
                                 
                                 <div style="width: 100%; display: flex; flex-direction: column;" >
                                     <div style="width:70%; align-items: center;">
-                                        <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo">
-                                        <small>Joseph fakher</small>
+                                        <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo" style="margin: 2px">
+                                        <small style="margin: 6px">Joseph fakher</small>
                                     </div>
                                     <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour. </strong>
                                     
@@ -236,7 +239,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                                 <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
                                 
                             </div>
-                    </div>
+                        </div>
 
                     
 
@@ -248,6 +251,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                     
                         <div style="display: flex; height: 100%; justify-content: center; " >
                             <br>
+                            
                             <a class="helperlinks" href="about.html">About</a>
                             <a class="helperlinks" href="">FAQ</a>
                             <a class="helperlinks" href="">Privacy</a>
@@ -256,7 +260,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                     </div>
 
 
-                </div>
+            </div>
 
             </div>
         </div>

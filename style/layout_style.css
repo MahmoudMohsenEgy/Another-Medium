@@ -21,9 +21,15 @@ body{
     height: fit-content;
 }
 
+
 .container-fluid{
     padding:0;
 }
+
+.rndBtn {
+    border-radius: 20px;
+}
+
 .columnn {
 float:left;
 padding:10px;
@@ -40,18 +46,23 @@ min-height: 0;
     flex-basis: 5%;
 }
 
-
+li{
+    padding: 0 0 80px;
+    height: 0;
+}
+#left-hr{
+    padding: 0 0 40px;
+}
 .right {
     position: sticky;
     top: 0;
     height: 100vh;
     background-color: white;
-    flex-basis: 25%;
+    flex-basis: 35%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    border-left: 1px solid rgb(0, 0, 0,0.1);
-    
+    border-left: 1px solid rgb(0, 0, 0,0.1);   
 }
 .center {
     background-color: white;
@@ -77,6 +88,7 @@ min-height: 0;
 .leftAssets:hover {
     cursor: pointer;
     transform: scale(1.2) ;
+
 }
 #navBar {
     height: 100%;
@@ -144,8 +156,10 @@ min-height: 0;
     padding: 5px;
     margin: 10px 10px 0px 0px;
     font-size: small;
+    margin-top: auto;
 }
 #maincontent {
+    max-width: 40vw;
     text-align: justify;
      line-height: 30px;
     font-family: Lora;
