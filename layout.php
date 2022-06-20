@@ -1,38 +1,4 @@
-<?php
-include 'logic/connect.php';
-class post{
-   public $id ;
-   public $title ;
-   public $content;
-   public $date;
-   public $authorId;
-   public $img;
-}
-$stmt = "SELECT * FROM posts
-        ORDER BY RAND()  LIMIT 2";
-
-$postsArray = mysqli_query($conn,$stmt);
-//$count = mysqli_num_rows($userFound);
-$result = array();
-
-    while($row = mysqli_fetch_array($postsArray)){
-        //echo $row['title'] . "<br>";
-        $post = new Post();
-        $post->id =$row['id'];
-        $post->title =$row['title'];
-        $post->content =$row['content'];
-        $post->date =$row['date'];
-        $post->authorId =$row['authorId'];
-        $post->img = $row['img'];
-        array_push($result, $post);
-
-  
-
-    }
-    
-    
-?>
-
+<?php include 'logic/getPosts.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -240,7 +206,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                     <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " id="getstartedbutton" >Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" id="signinbutton" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" id="signinbutton" onclick="checkUserState()" >Sign in</a>
                     </div>
                 </div>
                                         

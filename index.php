@@ -26,7 +26,7 @@
                     <li><a href=""> Write</a></li>
                     <li><a href="signin.php"> Sign in</a></li>
                 </ul>
-                <button class="button_style navigation_button black_button">Get started</button>
+                <button class="button_style navigation_button black_button" onclick="gotoSignUp()">Get started</button>
             </nav>
         </div>
     </header>
@@ -94,7 +94,14 @@
         </div>
 
     </main>
-
+<script>
+    function gotoSignIn(){
+        window.location.href = "http://localhost/another-medium/signin.php"
+    }
+    function gotoSignUp(){
+        window.location.href = "http://localhost/another-medium/signup.php"
+    }
+</script>
 </body>
 
 </html>
