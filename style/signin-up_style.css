@@ -4,9 +4,11 @@
  }
 
 
+.fullSize{
+    height: 100vh;
+}
 body {
     box-sizing: border-box;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
