@@ -46,7 +46,7 @@ function createPostPreview(post) {
 
 
 function setAuthor(post) {
-  $("#authorImage").attr("src", "assets/RightBar/joseph.jpg");
+  $("#authorImage").attr("src", "../assets/RightBar/joseph.jpg");
   $(".authorName").text("Mahmoud Mohsen");
   $("#numFollowers").text(
     String(Math.floor(Math.random(0, 100) * 100)) + "K Followers"

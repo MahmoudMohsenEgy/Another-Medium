@@ -1,6 +1,6 @@
 <?php
     
-    $conn = mysqli_connect("localhost:3309", "mohsen", "mohsen", "another_medium");
+    $conn = mysqli_connect("localhost:3306", "root", "", "another_medium2");
  
     if(!$conn)
         echo ("Connection Error");

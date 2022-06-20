@@ -663,7 +663,8 @@ Migration learning`,
   },
 ];
 
-const renderActive = () => {
+const renderActive = (id,title,author,content,img) => {
+  console.log("hena")
   while (main_content.firstChild)
     main_content.removeChild(main_content.firstChild);
   const search = window.location.search;
@@ -677,12 +678,16 @@ const renderActive = () => {
       renderOnePost(id, title, time, author, content, img)
     );
   } else {
-    const data = posts;
-    data.forEach(({ id, title, time, author, content, img }) => {
-      main_content.appendChild(
-        createDraft(id, title, time, author, content, img)
-      );
-    });
+    //const data = posts;
+    //data.forEach(({ id, title, time, author, content, img }) => {
+    //  main_content.appendChild(
+    //    createDraft(id, title, time, author, content, img)
+    //  );
+    //});
+    
+    main_content.appendChild(
+      createDraft(id,title,Date.now(),author,content,img)
+    );
   }
 };
 
@@ -694,4 +699,4 @@ const renderActive = () => {
 //   });
 // });
 
-renderActive();
+//renderActive(row[0]);
