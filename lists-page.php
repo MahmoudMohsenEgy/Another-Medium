@@ -81,10 +81,10 @@
                 <div class="rightBlock" style="margin-left: 5px;padding:1em">
                     <div class="row">
                     <div class="col-8 text-center" >
-                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " id="getstartedbutton" >Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" id="signinbutton">Sign in</a>
                     </div>
                 </div>
                                         

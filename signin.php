@@ -2,8 +2,10 @@
 include 'logic/connect.php';
 $searchErr = '';
 $employee_details='';
+echo " regalaaaaa <br>";
 if(isset($_POST['login']))
 {
+    echo " Salamo 3alekoooo <br>";
     if(!empty($_POST['email']) && !empty($_POST['password']))
     {
         $email = $_POST['email'];
@@ -12,9 +14,18 @@ if(isset($_POST['login']))
         
         $userFound = mysqli_query($conn,$stmt);
         $count = mysqli_num_rows($userFound); 
+        echo("before checking for count <br>");
         if($count>0){
-            $logged = "Wrong Username or Password" ;
-            header('Location:http://localhost/another-medium/home-page.php ');
+            $logged = true ;
+            echo("<script>console.log(about to fetch)</script> <br>");
+            $row = mysqli_fetch_row($userFound);
+            echo("after fetch? <br>");
+            echo "<script>document.write(localStorage.uid =  '".$row[0]."')</script> <br>";
+            echo "<script>document.write(localStorage.uname =  '$row[1]')</script> <br>";
+            echo $row[0];
+            echo $row[1];
+            //sleep(15);
+            echo "<script>window.location.href = 'http://localhost/another-medium/home-page.php' ;</script>";
         }
         else{
             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -48,7 +59,7 @@ if(isset($_POST['login']))
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style/signin-up_style.css">
-    <script src="js/signup-in.js"></script>
+   
 </head>
 <body class="fullSize">
     <div class="container-md center">
@@ -83,6 +94,7 @@ if(isset($_POST['login']))
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-</body>
+    <script src="js/signup-in.js"></script>
+    </body>
 
 </html>

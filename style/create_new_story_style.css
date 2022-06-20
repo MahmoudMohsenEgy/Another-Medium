@@ -81,7 +81,7 @@ nav .icon-right:hover{
     width: 60%;
     margin: auto;
 }
-.input{
+.inputt{
     resize: none;
     position: relative;
     left: 1%;
@@ -90,10 +90,10 @@ nav .icon-right:hover{
     font-family:Times,serif;
     width: 90%;
 }
-.input:focus{
+.inputt:focus{
     outline: none;
 }
-.input::placeholder{
+.inputt::placeholder{
     opacity: 50%;
 }
 #story-area{
@@ -104,19 +104,75 @@ nav .icon-right:hover{
     position: relative;
     display: inline-block;
     top: 10px;
-    left: -2%;
+    left: -4%;
     width: 30px;
     opacity: 60%;
     cursor: pointer;
+    z-index: 1;
     transition: transform ease-in-out 0.4s;
+}
+.add-img{
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    width: 30px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
 }
 .add-icon:hover{  
     opacity: 100%;
 }
 .add-icon-clicked{
     transform: rotate(135deg);
-    
+    opacity: 1;
+}
+.add-img-active{
+    animation: render 0.4s;
+    transform: translate(-3em,0);
+    opacity: 1;
 }
 .hidden{
     visibility: hidden;
+}
+
+#img{
+    border: none;
+    padding: 7px 10px;
+    width:100%;
+    border-radius: 20px;
+    background-color: rgba(100,100,100,0.2);
+}
+#img:focus{
+    outline: none;
+}
+
+.image-input{
+    animation: render 0.5s;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(100,100,100,0.3);
+    display: flex;
+    align-items: center;
+}
+
+@keyframes render{
+    0%{
+        transform: translate(0,0);
+        opacity: 0;
+    }
+    50%{
+        transform: translate(-1.5em,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-3em,0);
+        opacity: 100%;
+    }
 }

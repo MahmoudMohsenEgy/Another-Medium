@@ -1,5 +1,5 @@
 var txt = "";
-
+console.log("hello from js file post-page!")
 let title = document.getElementsByTagName("title")[0];
 // title.innerText = "haha";
 
@@ -64,3 +64,29 @@ function setContent(post) {
 }
 
 setContent({})
+
+console.log("Checking for uid and username")
+if(localStorage.uid && localStorage.uname){
+  console.log("ANA GOWA!!!!!")
+
+  $("#getstartedbutton").text("Hello " + localStorage.uname);
+  $("#getstartedbutton").attr({
+    class:"btn rndBtn",
+    style:"margin-top: 20px; color: #0d9c08;"
+  })
+  $("#signinbutton").text("Sign out")
+  $("#signinbutton").attr({
+    class:"btn btn-dark rndBtn text-center",
+    style:"margin-top: 20px; width: 100%; ",
+  })
+}
+
+
+
+function checkUserState(){
+  var btn = $("#signinbutton");
+  if (btn.text().toLowerCase() == "sign up" ){
+    localStorage.uid = 0;
+    location.uname = 0;
+  }
+}

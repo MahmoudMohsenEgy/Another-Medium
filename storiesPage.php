@@ -49,7 +49,7 @@
                             <hr style="height: 1px;">
                         </li>
                         <li class="nav-item">
-                            <a href="/crcreateNewStory.php">
+                            <a href="createNewStory.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
                             </a>
                         </li>
@@ -83,10 +83,10 @@
                 <div class="rightBlock" style="margin-left: 5px;padding:1em">
                     <div class="row">
                     <div class="col-8 text-center" >
-                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " id="getstartedbutton">Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" id="signinbutton" onclick="checkUserState()">Sign in</a>
                     </div>
                 </div>
                                         
