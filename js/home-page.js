@@ -16,7 +16,7 @@ const get_data = async (option) => {
     .catch((e) => console.error(e));
 };
 
-const createDraft = (id, title, time, author, content, img) => {
+const getTimeTxt = (time) => {
   const months = [
     "jan",
     "Feb",
@@ -51,7 +51,11 @@ const createDraft = (id, title, time, author, content, img) => {
       : timeinHrs > 1
       ? timeinHrs.toFixed(0) + " hrs ago"
       : timeinMins.toFixed(0) + " min ago";
+  return timetxt;
+};
 
+const createDraft = (id, title, time, author, content, img) => {
+  const timetxt = getTimeTxt(time);
   const semiContent = content.slice(0, 300);
 
   const post = document.createElement("div");
@@ -84,8 +88,32 @@ const createDraft = (id, title, time, author, content, img) => {
   post.style.marginTop = "20px";
   return post;
 };
+const estTime = (article) => {
+  return ((article.length * 0.3) / 60).toFixed(0) + " mins";
+};
 
-const renderOnePost = () => {};
+const renderOnePost = (id, title, time, author, content, img) => {
+  const timetxt = getTimeTxt(time);
+  const post = document.createElement("div");
+  post.style =
+    "padding:1em;display:flex;flex-direction:column; align-items:center;font:sans-serif";
+  post.innerHTML = `
+    <div style="display:flex;flex-direction:row;align-self:start;margin:2em 0;align-items:center;">
+      <img src="${
+        author.profilePicture
+      }" alt="userphoto" class="rounded-circle" style="width: 150px;height:150px"/>
+      <div style="display: flex; flex-direction: column; margin-left: 30px;">
+          <h3><b class="authorName">${author.name}</b></h3>
+          <small id="date">${timetxt} <b>·</b> ${estTime(content)} read</small>
+          <small></small>
+      </div> 
+    </div>
+    <Strong style="font-size:2rem;">${title}</Strong>
+    <br>
+    <pre class="container" style="font-family:sans-serif">${content}</pre>
+  `;
+  return post;
+};
 
 const posts = [
   {
@@ -635,10 +663,6 @@ Migration learning`,
   },
 ];
 
-const estTime = (article) => {
-  return (article.length * 1.5) / 60 + " mins";
-};
-
 const renderActive = () => {
   while (main_content.firstChild)
     main_content.removeChild(main_content.firstChild);
@@ -650,7 +674,7 @@ const renderActive = () => {
     const post = posts.find((p) => p.title === postTitle);
     const { id, title, time, author, content, img } = post;
     main_content.appendChild(
-      createDraft(id, title, time, author, content, img)
+      renderOnePost(id, title, time, author, content, img)
     );
   } else {
     const data = posts;
