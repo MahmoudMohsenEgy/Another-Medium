@@ -22,13 +22,13 @@
                     <span id="publish" >Publish</span>
                 </li>
                 <li>
-                    <img src="./assets/LeftNavBar/icons/three dots.svg" class="icon-right" style="height: 1em;" ></img>
+                    <img src="./assets/LeftNavBar/icons/three dots.svg" class="icon-right" style="height: 1em;" />
                 </li>
                 <li>
-                    <img src="./assets/LeftNavBar/icons/Notification.svg" class="icon-right" ></img>
+                    <img src="./assets/LeftNavBar/icons/Notification.svg" class="icon-right" />
                 </li>
                 <li>
-                    <img src="./assets/LeftNavBar/icons/profile picture.svg" id="profile-picture"></img>
+                    <img src="./assets/LeftNavBar/icons/profile picture.svg" id="profile-picture"/>
                 </li>
             </ul>
         </div>
@@ -40,7 +40,20 @@
                 <img src="./assets/LeftNavBar/icons/Add.svg" id="add-icon-1" class="add-icon hidden"/>
                 <input name="Title" type="text" placeholder="Title" style="font-size: 2.5em;" class="input" id="input-1">
                 <br>
+                <img src="./assets/LeftNavBar/icons/Add image.svg" id="add-img" class="add-img"/>
                 <img src="./assets/LeftNavBar/icons/Add.svg" id="add-icon-2" class="add-icon hidden"/>
+                <div class="image-input hidden" id="img-input">
+                    <div style="font-family:sans-serif ;z-index:1;width:15em; padding:3em 5em; margin:auto;display:flex;flex-direction:column;align-items:center; background:white; border-radius:20px">
+                        <h3 >Please insert image's URL:</h3>
+                        <input type="url" id="img" name="img"/>
+                        <br>
+                        <div style="margin-top:1.7em">
+                            <span style="margin:0 5px;color:white;background-color:rgba(5, 157, 5,0.9);padding:7px 20px; border-radius:20px;cursor:pointer" id="save">Save</span>
+                            <span style="margin:0 5px;color:white;background-color:rgba(185, 43, 43,0.9);padding:7px 20px; border-radius:20px;cursor:pointer" id="cancle">Cancle</span>
+                        </div>
+                    </div>
+                    <div class="image-input" style="z-index: 0;" id="img-div" ></div>
+                </div>
                 <textarea name="story" type="text-area" placeholder="Tell your story..." style="font-size: 1.3em; overflow: hidden; " rows="20" class="input" id="input-2"></textarea>
             </div>
         </form>
