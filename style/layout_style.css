@@ -167,7 +167,7 @@ li{
 #allcontent {
     display: flex; 
     flex-direction: column; 
-    padding: 70px;
+    /* padding: 70px; */
 }
 
 @media (max-width:800px) {
