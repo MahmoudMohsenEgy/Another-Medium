@@ -43,14 +43,7 @@ function createPostPreview(post) {
   $("#postsPreview").append(postHolder);
   console.log(postHolder);
 }
-for (let i = 0; i < 3; i++) {
-  createPostPreview({
-    postImgSrc: "assets/RightBar/oscp-vs-ceh.jpg",
-    authImgSource: "assets/RightBar/joseph.jpg",
-    authName: "Joseph Fakher",
-    title: " How to crack interviews in 2022",
-  });
-}
+
 
 function setAuthor(post) {
   $("#authorImage").attr("src", "assets/RightBar/joseph.jpg");
@@ -70,4 +63,4 @@ function setContent(post) {
   );
 }
 
-setContent({});
+setContent({})

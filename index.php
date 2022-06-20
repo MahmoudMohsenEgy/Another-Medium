@@ -14,7 +14,7 @@
 <body>
     <header class="orange_background">
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="assets/Logo/medium-vector-logo.svg" alt="Logo">
             </a>
         </div>
@@ -24,7 +24,7 @@
                     <li><a href=""> Our story</a></li>
                     <li><a href=""> Membership</a></li>
                     <li><a href=""> Write</a></li>
-                    <li><a href="signin.html"> Sign in</a></li>
+                    <li><a href="signin.php"> Sign in</a></li>
                 </ul>
                 <button class="button_style navigation_button black_button">Get started</button>
             </nav>

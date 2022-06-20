@@ -11,7 +11,7 @@
 
     <!-- Change this to your page name-->
 
-    <title>Meduim+ | Your Stories</title>
+    <title>Meduim+ | Your Lists</title>
 
     <!--################################-->
     
@@ -21,27 +21,27 @@
     <div class="container-lg">    
         <div class="roww">
             <div class="column left">
-                <a href="index.html" >
+                <a href="index.php" >
                     <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
                 <ul class="nav flex-column justify-content-center" style="height: 100%;">
                         <li class="nav-item">
-                            <a href="home-page.html">
+                            <a href="home-page.php">
                                 <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="notification-page.html">
+                            <a href="notificationPage.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="lists-page.html">
+                            <a href="lists-page.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/stories-page.html">
+                            <a href="storiesPage.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories" style="width:60px ;">
                             </a>
                         </li>
@@ -49,7 +49,7 @@
                             <hr style="height: 1px;">
                         </li>
                         <li class="nav-item">
-                            <a href="/create-new-story.html">
+                            <a href="createNewStory.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
                             </a>
                         </li>
@@ -59,18 +59,16 @@
             <div class="column center" style="font-family:Calibri, 'Trebuchet MS', sans-serif, Arial;">
                 <div style="margin: 0 10% 0;">
                     <center style="display: flex; align-items: center; margin: 5em auto 2em;">
-                        <h1 style="flex: 40%; font-size:50px; text-align: left;">Your stories</h1>
+                        <h1 style="flex: 40%; font-size:50px; text-align: left;">Your Lists</h1>
                         <div style=" flex:40%; ">
-                            <a href="/create-new-story.html"><span style="color: aliceblue; background-color:green; border-radius:20px; padding:11px; margin:10px;"> Write a story </span> </a>
-                            <a href="#"><span style="border-style:solid ; border-width: 1px; border-radius:20px; padding:9px; margin:10px"> Import a story</span></a>
+                            <a href="#"><span style="color: aliceblue; background-color:rgb(2, 160, 2); border-radius:20px; padding:11px 1.5em; margin:10px;"> New list </span> </a>
                         </div>
                     </center>
                     <div id="all-content" style="padding-top: 0%;">
                         <div>
                             <ul style="display: flex; padding-left:0;list-style:none" id="options">
-                                <li id="drafts">Drafts</li>
-                                <li id="published">Published</li>
-                                <li id="responses">Responses</li>
+                                <li id="saved">Saved</li>
+                                <li id="highlights">Highlights</li>
                             </ul>
                             <center><hr style="text-align:left;margin:0 0 20px;width: 100%; position: relative;" id="nav-hr"></center>
                         </div>
@@ -83,16 +81,16 @@
                 <div class="rightBlock" style="margin-left: 5px;padding:1em">
                     <div class="row">
                     <div class="col-8 text-center" >
-                    <a href="signup.html" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.html" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
                     </div>
                 </div>
                                         
                     
                 <div class="usr_info_placeholder" onclick="" style="margin-top: 50px;">
-                    <img id="authorImage" style="height: 100px; width: 100px; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
+                    <img id="authorImage" style="height: 80%; width: 30%; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
                     <div id="rightpublisher" class="container">
                         <Strong class="authorName">Mahmoud Mohsen</Strong>
                         <br>
@@ -150,7 +148,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/stories-page.js"></script>
+<script src="./js/lists-page.js"></script>
 <script src="./js/post-page.js"></script>
 </body>
 </html>

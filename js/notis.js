@@ -1,4 +1,4 @@
-const stories_page = document.querySelector("#stories-page");
+const stories_page = document.querySelector("#storiesPage");
 const main_content = document.querySelector("#maincontent");
 const home = document.querySelector("#home");
 

@@ -23,12 +23,12 @@
     <div class="container-lg">
         <div class="roww">
             <div class="column left">
-                <a href="layout.html">
+                <a href="layout.php">
                     <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
                 <ul class="nav flex-column justify-content-center" style="height: 100%;">
                     <li class="nav-item">
-                        <a href="layout.html">
+                        <a href="layout.php">
                             <img class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page">
                         </a>
                     </li>
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/stories-page.html">
+                        <a href="storiesPage.php">
                             <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
                         </a>
                     </li>
@@ -51,7 +51,7 @@
                         <hr style="height: 1px;">
                     </li>
                     <li class="nav-item">
-                        <a href="/stories-page.html" style="height:0">
+                        <a href="storiesPage.php" style="height:0">
                             <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles">
                         </a>
                     </li>
