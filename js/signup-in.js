@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
         input.addEventListener("blur",()=>{
             const label = input.previousElementSibling.previousElementSibling
-            console.log("here")
+            //console.log("here")
             label.classList.remove('translate_up')
             label.classList.add('translate_down')
         })

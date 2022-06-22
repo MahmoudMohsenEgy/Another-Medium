@@ -1,3 +1,5 @@
+<?php include 'logic/getPosts.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,27 +20,27 @@
     <div class="container-lg">    
         <div class="roww">
             <div class="column left">
-                <a href="index.html" >
+                <a href="index.php" >
                     <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
                 <ul class="nav flex-column justify-content-center" style="height: 100%; margin:auto">
                         <li class="nav-item">
-                            <a href="home-page.html">
+                            <a href="layout.php">
                                 <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="notification-page.html">
+                            <a href="notificationPage.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="lists-page.html">
+                            <a href="lists-page.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/stories-page.html">
+                            <a href="storiesPage.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories" style="width:60px ;">
                             </a>
                         </li>
@@ -48,7 +50,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="/create-new-story.html">
+                            <a href="createNewStory.php">
                                 <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
                             </a>
                         </li>
@@ -201,10 +203,10 @@ https://machinelearningmastery.com/start-here/#algorithms
                 <div class="rightBlock" style="margin-left: 5px;padding:1em">
                     <div class="row">
                     <div class="col-8 text-center" >
-                    <a href="signup.html" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    <a href="signup.php" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " id="getstartedbutton" >Get started</a>
                     </div>
                     <div class="col">
-                        <a href="signin.html" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                        <a href="signin.php" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" id="signinbutton" onclick="checkUserState()" >Sign in</a>
                     </div>
                 </div>
                                         
@@ -254,7 +256,7 @@ https://machinelearningmastery.com/start-here/#algorithms
                         <div style="display: flex; height: 100%; justify-content: center; " >
                             <br>
                             
-                            <a class="helperlinks" href="about.html">About</a>
+                            <a class="helperlinks" href="about.php">About</a>
                             <a class="helperlinks" href="">FAQ</a>
                             <a class="helperlinks" href="">Privacy</a>
                             <a class="helperlinks" href="">Terms</a>
@@ -268,10 +270,34 @@ https://machinelearningmastery.com/start-here/#algorithms
         </div>
     </div>
 
-<script src="./js/stories-page.js"></script>
+<script src="./jsstoriesPage.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/post-page.js"></script>
+<script>
+   
+    
+  
+  
+
+
+
+    console.log(" posts->");
+    var posts = new Array();
+    var posts = <?php echo json_encode($result); ?>;
+    
+    console.log(posts);
+    for (let i=0 ; i < posts.length ; i++){
+createPostPreview({
+    postImgSrc:posts[i]['img'],
+    authImgSource:"assets/RightBar/joseph.jpg",
+    authName: "Joseph Fakher",
+    title: [posts[i]["title"]]
+
+});
+
+    }
+</script>
 </body>
 </html>

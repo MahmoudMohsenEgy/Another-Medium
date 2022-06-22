@@ -23,7 +23,7 @@
             </h3>
         </div>
         <div class="row">
-            <form action="">
+            <form method="post" action="logic/insert.php">
                 <div>
                     <label for="email">Email :</label>
                     <br>
@@ -48,14 +48,14 @@
                     <input type="password" id="confpassword" name="confpassword" placeholder="password">
                 </div>
                 <br>
-                <button type="submit">Sign up</button>
+                <button type="submit" name="submit">Sign up</button>
 
             </form>
         </div>
 
         <div class="row">
             <p>
-                Already Have an account <a href="signin.html"> Sign in </a>
+                Already Have an account <a href="signin.php"> Sign in </a>
             </p>
             <p>
                 By Creating an account I accept Another-Medium <span>terms and services</span>

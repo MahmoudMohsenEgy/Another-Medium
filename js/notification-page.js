@@ -79,17 +79,17 @@ const responses = [
 const all = [
   {
     id: "34rtyui8vds7",
-    title: "Untitled notification 1",
+    title: "Hafez liked your post",
     time: Date.UTC(2021),
   },
   {
     id: "34rtdsayui87",
-    title: "Untitled notification 2",
+    title: "Shafik liked your post",
     time: Date.UTC(2022, 3),
   },
   {
     id: "34rtyuidsa87",
-    title: "Untitled notification 3",
+    title: "Joseph liked your post",
     time: Date.UTC(2022, 4, 1),
   },
   {

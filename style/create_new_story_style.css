@@ -81,7 +81,7 @@ nav .icon-right:hover{
     width: 60%;
     margin: auto;
 }
-.input{
+.inputt{
     resize: none;
     position: relative;
     left: 1%;
@@ -90,10 +90,10 @@ nav .icon-right:hover{
     font-family:Times,serif;
     width: 90%;
 }
-.input:focus{
+.inputt:focus{
     outline: none;
 }
-.input::placeholder{
+.inputt::placeholder{
     opacity: 50%;
 }
 #story-area{

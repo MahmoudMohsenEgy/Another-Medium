@@ -103,14 +103,12 @@ const renderOnePost = (id, title, time, author, content, img) => {
         author.profilePicture
       }" alt="userphoto" class="rounded-circle" style="width: 150px;height:150px"/>
       <div style="display: flex; flex-direction: column; margin-left: 30px;">
-          <h3><b>${author.name}</b></h3>
+          <h3><b class="authorName">${author.name}</b></h3>
           <small id="date">${timetxt} <b>·</b> ${estTime(content)} read</small>
           <small></small>
       </div> 
     </div>
     <Strong style="font-size:2rem;">${title}</Strong>
-    <br>
-    <img src="${img}" alt="post's image" style="width:35rem;"/>
     <br>
     <pre class="container" style="font-family:sans-serif">${content}</pre>
   `;
@@ -697,3 +695,8 @@ const renderActive = () => {
 // });
 
 renderActive();
+
+
+
+
+

@@ -15,7 +15,7 @@
 
         <div class="brandContainer">
 
-            <a href="about.html">
+            <a href="about.php">
                 <img src="assets/Another-Medium-logos_black.png" alt="logo"
                 style="width: 70px; height: 70px;">
 
