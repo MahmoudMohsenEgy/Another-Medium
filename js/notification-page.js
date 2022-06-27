@@ -46,7 +46,7 @@ const createDraft = (id, title, date) => {
     <a href="#${title.split(" ").join("-")}">
       <b style="color:black;font-size:16px;">${title}</b>
     </a>
-    <p style='opacity:50%;'> Created ${timetxt} ago </p>   
+    <p style='opacity:50%;'> ${timetxt} ago </p>   
     <hr>
   </div>
   `;
@@ -76,47 +76,30 @@ const responses = [
     time: Date.now(),
   },
 ];
-const drafts = [
+const all = [
   {
     id: "34rtyui8vds7",
-    title: "Untitled story 1",
+    title: "Untitled notification 1",
     time: Date.UTC(2021),
   },
   {
     id: "34rtdsayui87",
-    title: "Untitled story 2",
+    title: "Untitled notification 2",
     time: Date.UTC(2022, 3),
   },
   {
     id: "34rtyuidsa87",
-    title: "Untitled story 3",
+    title: "Untitled notification 3",
     time: Date.UTC(2022, 4, 1),
   },
   {
     id: "34rtyui8fas7",
-    title: "Untitled story 4",
+    title: "Untitled notification 4",
     time: Date.now(),
   },
   {
     id: "34rtyui8ewf7",
-    title: "Untitled story 5",
-    time: Date.UTC(2020, 6),
-  },
-];
-const published = [
-  {
-    id: "34rtyui8vds7",
-    title: "Untitled published 1",
-    time: Date.UTC(2021),
-  },
-  {
-    id: "34rtyui8fas7",
-    title: "Untitled published 4",
-    time: Date.now(),
-  },
-  {
-    id: "34rtyui8ewf7",
-    title: "Untitled published 5",
+    title: "Untitled notification 5",
     time: Date.UTC(2020, 6),
   },
 ];
@@ -125,12 +108,7 @@ const renderActive = (currentActive) => {
   document.getElementById(currentActive).classList.add("active");
   while (main_content.firstChild)
     main_content.removeChild(main_content.firstChild);
-  const data =
-    currentActive === "drafts"
-      ? drafts
-      : currentActive === "published"
-      ? published
-      : responses;
+  const data = currentActive === "all" ? all : responses;
   data.forEach(({ id, title, time }) => {
     main_content.appendChild(createDraft(id, title, time));
   });
@@ -144,4 +122,4 @@ options.forEach((option) => {
   });
 });
 
-renderActive("drafts");
+renderActive("all");

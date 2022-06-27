@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/LeftNavBar/icons/favicon_2.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
     <!-- Change this to your page name-->
 
     <title>Change This to your page name</title>
@@ -13,45 +15,64 @@
     <link rel="stylesheet" href="style/layout_style.css">
 </head>
 <body>
-    
-        <div class="row">
+    <div class="container-lg">    
+        <div class="roww">
             <div class="column left">
-                <a href="layout.html">
-                    <img style="cursor: pointer;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus"/>
+                <a href="index.html" >
+                    <img style="cursor: pointer; margin-top: 20px; margin-right: 8px;" src="./assets/LeftNavBar/icons/MediumPlus.svg" alt="medium plus" />
                 </a>
-                <div id="navBar">
-                    <a href="layout.html">
-                        <img  class="leftAssets" src="assets/LeftNavBar/home.svg" alt="Home Page" >
-                    </a>
-                    <a href="#">
-                        <img class="leftAssets" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
-                    </a>
-                    <a href="#">
-                        <img class="leftAssets" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
-                    </a>
-                    <a href="/stories-page.html">
-                    <img class="leftAssets" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories">
-                    </a>
-                <center><hr style="text-align:left;margin-bottom: 20px;"></center>
-                <img class="leftAssets" src="assets/LeftNavBar/write.svg" alt="Write Articles">
-                </div>
+                <ul class="nav flex-column justify-content-center" style="height: 100%; margin:auto">
+                        <li class="nav-item">
+                            <a href="home-page.html">
+                                <img  class="leftAssets nav-link" src="assets/LeftNavBar/home.svg" alt="Home Page" >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="notification-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bell_off.svg" alt="Notifications">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lists-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/bookmark.svg" alt="Saved Articles">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/stories-page.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/icons/stories-icon.svg" alt="stories" style="width:60px ;">
+                            </a>
+                        </li>
+                        <li class="nav-item" id="left-hr">
+                            <div >
+                                <hr style="height: 1px;">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/create-new-story.html">
+                                <img class="leftAssets nav-link" src="assets/LeftNavBar/write.svg" alt="Write Articles" >
+                            </a>
+                        </li>
+                </ul>
             </div>
             
-            <div class="column center">
-                <h1><center>Article Here</center></h1>
+            <div class="center column">
+               
                 <div id="allcontent">
                     <div style="display: flex;">
-                        <img style="width: 20vw; border-radius: 50%;" src="assets/RightBar/joseph.jpg" alt="userphoto">
+                        <img   src="assets/RightBar/joseph.jpg" alt="userphoto" class="rounded-circle" style="width: 150px;height:150px">
                         <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                            <p><b>Mahmoud Mohsen</b></p>
-                            <small>April 17,2022</small>
-                            <small>11 mins read</small>
+                            <p ><b class="authorName">Mahmoud Mohsen</b></p>
+                            <small id="date">April 17,2022</small>
+                            <small id="readingMins">11 mins read</small>
                         </div>
                         
                         
                     </div>
-                <p id="maincontent">
-                    machine learning, there is a theorem called “no free lunch.” In short, it states that no single algorithm works for all problems, especially in supervised learning (ie, predictive modeling).
+                    <Strong style="font-size:2rem;">Introduction to Machine Learning algorithms using Python</Strong>
+                    <br>
+                <pre id="maincontent" class="container">
+                
+machine learning, there is a theorem called “no free lunch.” In short, it states that no single algorithm works for all problems, especially in supervised learning (ie, predictive modeling).
 For example, you can’t say that neural networks are always better than decision trees, and vice versa. There are many factors at work, such as the size and structure of the data set.
 Therefore, you should experiment with a variety of different algorithms for specific problems and set aside a data “test set” to evaluate performance and select winners.
 Of course, the algorithm you try must suit your problem, that is, choose the right machine learning task. For example, if you need to clean the house, you may use a vacuum cleaner, broom or mop, but you won’t take out the shovel and start digging.
@@ -169,48 +190,57 @@ https://towardsdatascience.com/a-tour-of-the-top-10-algorithms-for-machine-learn
 https://machinelearningmastery.com/start-here/#algorithms
 613
 
-
-                </p>
+                
+                </pre>
 
                 </div>
 
             </div>
-            <div class="column right">
-                <h1><center>Right</center></h1>
-                <div class="rightBlock">
-                    <a href="">Sign in</a>
-                    <input class="search" type="text" placeholder="Search..">
+            <div class="right column">
+                
+                <div class="rightBlock" style="margin-left: 5px;padding:1em">
+                    <div class="row">
+                    <div class="col-8 text-center" >
+                    <a href="signup.html" role="button" class="btn btn-dark rndBtn text-center" style="margin-top: 20px; width: 100%; " >Get started</a>
+                    </div>
+                    <div class="col">
+                        <a href="signin.html" role="button" class="btn rndBtn" style="margin-top: 20px; color: #0d9c08;" >Sign in</a>
+                    </div>
+                </div>
+                                        
                     
-                    <div class="usr_info_placeholder">
-                        <img style="width: 10vw; height: 100%; border-radius:50%; margin-right: 10px;" src="assets/RightBar/usr_img.jpg" alt="follow">
-                        <div id="rightpublisher">
-                            <Strong>Mahmoud Mohsen</Strong>
+                    <div class="usr_info_placeholder" onclick="" style="margin-top: 50px;">
+                        <img id="authorImage" style="height: 80%; width: 30%; " src="assets/RightBar/usr_img.jpg" class=" rounded-circle " alt="follow">
+                        <div id="rightpublisher" class="container">
+                            <Strong class="authorName">Mahmoud Mohsen</Strong>
                             <br>
-                            <small>52K followers</small>
+                            <small id="numFollowers">52K followers</small>
                             <br>
-                            <button>follow</button>
+                            <button type="button" class="btn btn-outline-success rndBtn">Follow</button>
                             <br>
                             
                         </div>
                         
                     </div>
                     
-                    <div style="height: auto; ">
+                    <div style="height: auto; margin-left: 5px; ">
                         <hr style="opacity: 1; width: 100%;">
                         <strong style="margin-top: 10px; margin-bottom: 10px;">More posts</strong>
-                        
-                        <div class="post_demo_placeholder">
-                            
-                            <div style="width: 100%; display: flex; flex-direction: column;">
-                                <div style="width:70%; align-items: center;">
-                                    <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo">
-                                    <small>Joseph fakher</small>
+                        <div style="position:absolute; bottom:0; margin-left: auto; margin-right: auto;"></div>
+                        <div id="postsPreview">
+                            <div class="post_demo_placeholder shadow bg-white rounded p-2" >
+                                
+                                <div style="width: 100%; display: flex; flex-direction: column;" >
+                                    <div style="width:70%; align-items: center;">
+                                        <img   class="userphoto" src="assets/RightBar/joseph.jpg" alt="user photo" style="margin: 2px">
+                                        <small style="margin: 6px">Joseph fakher</small>
+                                    </div>
+                                    <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour. </strong>
+                                    
                                 </div>
-                                <strong style="width:auto; font-size:medium;">Lifehack: How to finish CEH in 1 hour.</strong>
+                                <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
                                 
                             </div>
-                            <img style="width: 30%;height: 50%; padding: 5px;" class="thumbnail" src="assets/RightBar/oscp-vs-ceh.jpg" alt="post img">
-                            
                         </div>
 
                     
@@ -220,20 +250,28 @@ https://machinelearningmastery.com/start-here/#algorithms
                         
 
                     </div>
-                    <div style="display: flex; height: 100%; justify-content: center;" >
-                        <br>
-                        <a class="helperlinks" href="">About</a>
-                        <a class="helperlinks" href="">FAQ</a>
-                        <a class="helperlinks" href="">Privacy</a>
-                        <a class="helperlinks" href="">Terms</a>
+                    
+                        <div style="display: flex; height: 100%; justify-content: center; " >
+                            <br>
+                            
+                            <a class="helperlinks" href="about.html">About</a>
+                            <a class="helperlinks" href="">FAQ</a>
+                            <a class="helperlinks" href="">Privacy</a>
+                            <a class="helperlinks" href="">Terms</a>
+                        </div>
                     </div>
 
 
-                </div>
+            </div>
 
             </div>
         </div>
-    
+    </div>
+
 <script src="./js/stories-page.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./js/post-page.js"></script>
 </body>
 </html>
